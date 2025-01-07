@@ -1,6 +1,9 @@
 package model;
 
 import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 
 public interface UserMapper {
     @Insert("INSERT INTO users (username, password, email) VALUES (#{username}, #{password}, #{email})")
@@ -13,6 +16,4 @@ public interface UserMapper {
     User findUserByEmail(String email);
     @Update("UPDATE users SET name = #{name}, address = #{address}, phone = #{phone} WHERE username = #{username}")
     void updateUserProfile(User user);
-
-
 }

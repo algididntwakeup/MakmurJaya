@@ -14,7 +14,7 @@
         </environment>
     </environments>
     <mappers>
-        <mapper resource="model/UserMapper.xml"/>
-        <mapper resource="model/CategoryMapper.xml"/>
+        <mapper class="model.UserMapper"/>
+        <mapper class="model.CategoryMapper"/>
     </mappers>
 </configuration>

@@ -4,6 +4,7 @@ import model.Category;
 import model.CategoryMapper;
 import org.apache.ibatis.session.SqlSession;
 import view.CategoryView;
+import util.MyBatisUtil;
 
 import java.util.List;
 

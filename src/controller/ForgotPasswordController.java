@@ -5,6 +5,7 @@ import model.UserMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.mindrot.jbcrypt.BCrypt;
 import view.ForgotPasswordView;
+import util.MyBatisUtil;
 
 import javax.swing.*;
 import java.util.Random;

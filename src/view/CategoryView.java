@@ -27,4 +27,9 @@ public class CategoryView extends JFrame {
             tableModel.addRow(category);
         }
     }
+
+    public void setModal(boolean b) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setModal'");
+    }
 }

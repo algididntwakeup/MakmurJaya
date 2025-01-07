@@ -4,6 +4,7 @@ import model.User;
 import model.UserMapper;
 import org.apache.ibatis.session.SqlSession;
 import view.UpdateProfileView;
+import util.MyBatisUtil;
 
 import javax.swing.*;
 

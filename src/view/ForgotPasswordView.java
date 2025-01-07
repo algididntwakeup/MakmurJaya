@@ -28,4 +28,9 @@ public class ForgotPasswordView extends JFrame {
     public JButton getResetPasswordButton() {
         return btnResetPassword;
     }
+
+    public void setModal(boolean b) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setModal'");
+    }
 }

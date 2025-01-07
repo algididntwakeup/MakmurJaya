@@ -42,4 +42,9 @@ public class ChangePasswordView extends JFrame {
     public JButton getChangePasswordButton() {
         return btnChangePassword;
     }
+
+    public void setModal(boolean b) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setModal'");
+    }
 }

@@ -49,4 +49,9 @@ public class UpdateProfileView extends JFrame {
     public JButton getUpdateButton() {
         return btnUpdate;
     }
+
+    public void setModal(boolean b) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setModal'");
+    }
 }

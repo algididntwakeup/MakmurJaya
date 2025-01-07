@@ -35,4 +35,9 @@ public class LoginView extends JFrame {
     public JButton getLoginButton() {
         return btnLogin;
     }
+
+    public void setModal(boolean b) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setModal'");
+    }
 }

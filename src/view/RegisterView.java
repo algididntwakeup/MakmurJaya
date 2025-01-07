@@ -3,7 +3,7 @@ package view;
 import javax.swing.*;
 import java.awt.*;
 
-public class RegisterView extends JFrame {
+public class RegisterView extends JDialog {
     private JTextField txtUsername = new JTextField(20);
     private JPasswordField txtPassword = new JPasswordField(20);
     private JTextField txtEmail = new JTextField(20);
@@ -12,7 +12,7 @@ public class RegisterView extends JFrame {
     public RegisterView() {
         setTitle("Register");
         setSize(300, 200);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
         JPanel panel = new JPanel(new GridLayout(4, 2));
         panel.add(new JLabel("Username:"));
@@ -41,6 +41,24 @@ public class RegisterView extends JFrame {
 
     public JButton getRegisterButton() {
         return btnRegister;
+    }
+
+    public void setUsername(String username) {
+        txtUsername.setText(username);
+    }
+
+    public void setPassword(String password) {
+        txtPassword.setText(password);
+    }
+
+    public void setEmail(String email) {
+        txtEmail.setText(email);
+    }
+
+    public void clearFields() {
+        txtUsername.setText("");
+        txtPassword.setText("");
+        txtEmail.setText("");
     }
 }
     

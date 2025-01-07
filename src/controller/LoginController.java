@@ -5,6 +5,7 @@ import model.UserMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.mindrot.jbcrypt.BCrypt;
 import view.LoginView;
+import util.MyBatisUtil;
 
 import javax.swing.*;
 

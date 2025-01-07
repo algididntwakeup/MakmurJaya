@@ -9,6 +9,12 @@ import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
+        // Create a hidden parent frame for modality
+        JFrame parentFrame = new JFrame();
+        parentFrame.setSize(0, 0);
+        parentFrame.setLocationRelativeTo(null);
+        parentFrame.setVisible(true);
+
         while (true) {
             String[] options = {
                 "1. Register",
@@ -42,6 +48,8 @@ public class Main {
                     RegisterView registerView = new RegisterView();
                     UserMapper registerMapper = session.getMapper(UserMapper.class);
                     new RegisterController(registerView, registerMapper);
+                    registerView.setLocationRelativeTo(parentFrame);
+                    registerView.setModal(true);
                     registerView.setVisible(true);
                     break;
 
@@ -49,6 +57,8 @@ public class Main {
                     LoginView loginView = new LoginView();
                     UserMapper loginMapper = session.getMapper(UserMapper.class);
                     new LoginController(loginView, loginMapper);
+                    loginView.setLocationRelativeTo(parentFrame);
+                    loginView.setModal(true);
                     loginView.setVisible(true);
                     break;
 
@@ -56,6 +66,8 @@ public class Main {
                     ChangePasswordView changePasswordView = new ChangePasswordView();
                     UserMapper changePasswordMapper = session.getMapper(UserMapper.class);
                     new ChangePasswordController(changePasswordView, changePasswordMapper);
+                    changePasswordView.setLocationRelativeTo(parentFrame);
+                    changePasswordView.setModal(true);
                     changePasswordView.setVisible(true);
                     break;
 
@@ -63,6 +75,8 @@ public class Main {
                     ForgotPasswordView forgotPasswordView = new ForgotPasswordView();
                     UserMapper forgotPasswordMapper = session.getMapper(UserMapper.class);
                     new ForgotPasswordController(forgotPasswordView, forgotPasswordMapper);
+                    forgotPasswordView.setLocationRelativeTo(parentFrame);
+                    forgotPasswordView.setModal(true);
                     forgotPasswordView.setVisible(true);
                     break;
 
@@ -70,6 +84,8 @@ public class Main {
                     UpdateProfileView updateProfileView = new UpdateProfileView();
                     UserMapper updateProfileMapper = session.getMapper(UserMapper.class);
                     new UpdateProfileController(updateProfileView, updateProfileMapper);
+                    updateProfileView.setLocationRelativeTo(parentFrame);
+                    updateProfileView.setModal(true);
                     updateProfileView.setVisible(true);
                     break;
 
@@ -77,11 +93,13 @@ public class Main {
                     CategoryView categoryView = new CategoryView();
                     CategoryMapper categoryMapper = session.getMapper(CategoryMapper.class);
                     new CategoryController(categoryView, categoryMapper);
+                    categoryView.setLocationRelativeTo(parentFrame);
+                    categoryView.setModal(true);
                     categoryView.setVisible(true);
                     break;
 
                 default:
-                    JOptionPane.showMessageDialog(null, "Invalid option. Please try again.");
+                    JOptionPane.showMessageDialog(parentFrame, "Invalid option. Please try again.");
             }
 
             session.close();
